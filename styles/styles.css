@@ -1,0 +1,63 @@
+#tri_graph{
+    margin-left: -60px;
+    /* overflow: scroll; */
+    overflow: auto;
+}
+
+body{
+    background-color: #14213d;
+    margin: 3rem 4rem;
+}
+a {
+    color: #fca311;
+    text-decoration: none;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+h1{
+    font-family: 'Inter';
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px lightgrey;
+}
+
+h2{
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 300;
+    color: #fca311;
+    text-align: center;
+}
+
+.y1-gridlines path, .y1-axis path, .y1-gridlines line, .x-gridlines line{
+    stroke: lightgrey;
+    opacity: .3;
+}
+
+.intro-p{
+    font-family: 'Inter';
+    color: #e5e5e5;
+    margin: auto;
+    width: 625px;
+    line-height: 1.5;
+}
+
+strong{
+    color: #fca311;
+    font-weight: 600;
+}
+
+.time-header{
+    font-family: 'Inter';
+    font-size: 28px;
+    color: white;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.timeline{
+    overflow-x: hidden;
+    width:1200px;
+    margin-left: 20px;
+}
