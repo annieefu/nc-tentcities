@@ -36,10 +36,11 @@ const vis_timeline = async () => {
 
   timeline.append("text")
   .attr("font-size", "20px")
-  .text("February 2021")
+  .text("February 221")
   .attr("font-family", "Inter")
   .attr("fill", "white")
   .attr("x", 5300)
+
 
   timeline.append("text")
   .attr("font-size", "20px")
