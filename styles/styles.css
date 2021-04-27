@@ -35,6 +35,10 @@ h2{
     opacity: .3;
 }
 
+.timeline-container{
+    text-align:center;
+}
+
 .intro-p{
     font-family: 'Inter';
     color: #e5e5e5;
@@ -53,11 +57,10 @@ strong{
     font-size: 28px;
     color: white;
     text-align: left;
-    margin-left: 60px;
+    margin-left: 29rem;
 }
 
 .timeline{
-    overflow-x: hidden;
+    overflow: auto;
     width:1200px;
-    margin-left: 20px;
 }

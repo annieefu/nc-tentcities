@@ -1,6 +1,5 @@
 // javascript for the total population line graph
 
-// Distance Traveled Chart
 const trisvg = d3.select("#tri_graph");
 const linewidth = 1200;
 const lineheight = 370;
@@ -27,7 +26,7 @@ const vis_line = async () => {
   console.log(line_data)
 
   // const yearExtent = d3.extent(line_data, d => d["year"]);
-  const yearScale = d3.scaleTime().domain([new Date("2020-01-01"), new Date("2021-02-20")]).range([0, lineWidth - 2]);
+  const yearScale = d3.scaleTime().domain([new Date("2020-01-01"), new Date("2021-03-20")]).range([0, lineWidth - 2]);
 
   // const distExtent = d3.extent(distances_per_yr_dict, d => d["max_dist"]);
   const flowExtent = [1900, 3500]
@@ -175,11 +174,11 @@ const trisvg2 = d3.select("#tri_timeline");
 const tlwidth = 3400;
 const tlheight = 370;
 
-const tlmargin = { top: 60, right: 40, bottom: 40, left: 0 };
+const tlmargin = { top: 60, right: 40, bottom: 40, left: 40 };
 const tlWidth = tlwidth - tlmargin.left - tlmargin.right;
 const tlHeight = tlheight - tlmargin.top - tlmargin.bottom;
 const timeline = trisvg2.append("g").attr("id", "timeline")
-  .attr("transform", "translate(" + (-4300) + "," + (tlmargin.top) + ")")
+  .attr("transform", "translate(" + (-4800) + "," + (tlmargin.top) + ")")
 
 
   // let line_data = await d3.csv("inflow-outflow.csv");
@@ -209,6 +208,13 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("fill", "white")
   .attr("x", 5300)
 
+  timeline.append("text")
+  .attr("font-size", "20px")
+  .text("March 2021")
+  .attr("font-family", "Inter")
+  .attr("fill", "white")
+  .attr("x", 5750)
+
   timeline.append("rect")
   .attr("width", "380px")
   .attr("stroke", "white")
@@ -217,6 +223,7 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("height", "160px")
   .attr("x", 5220)
   .attr("y", 110)
+  
 
   timeline.append("svg:image")
   .attr("xlink:href", "images/feb2021.png")
@@ -349,6 +356,8 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("x", 3630)
   .attr("y", 40)
 
+  // September 2020
+
   timeline.append("text")
   .attr("font-size", "20px")
   .text("September 2020")
@@ -378,12 +387,59 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("x", 2800)
 
 
+  timeline.append("rect")
+  .attr("width", "375px")
+  .attr("fill", "#fca314")
+  .attr("opacity", 0.3)
+  .attr("height", "142px")
+  .attr("x", 2745)
+  .attr("y", 120)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/aug2020-2.png")
+  .attr("height", "280px")
+  .attr("x", 2754)
+  .attr("y", 81)
+
+  //aug 2020 1
+
+
+  timeline.append("rect")
+  .attr("width", "352px")
+  .attr("fill", "#fca314")
+  .attr("opacity", 0.3)
+  .attr("height", "80px")
+  .attr("x", 2460)
+  .attr("y", 20)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/aug2020-1.png")
+  .attr("height", "280px")
+  .attr("x", 2474)
+  .attr("y", -20)
+
+
   timeline.append("text")
   .attr("font-size", "20px")
   .text("July 2020")
   .attr("font-family", "Inter")
   .attr("fill", "white")
   .attr("x", 2400)
+
+
+  timeline.append("rect")
+  .attr("width", "272px")
+  .attr("fill", "white")
+  .attr("opacity", 0.3)
+  .attr("height", "110px")
+  .attr("x", 2360)
+  .attr("y", 140)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/july2020.png")
+  .attr("height", "274px")
+  .attr("x", 2366)
+  .attr("y", 100)
 
   timeline.append("text")
   .attr("font-size", "20px")
@@ -416,12 +472,76 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("x", 800)
 
 
+
+  timeline.append("rect")
+  .attr("width", "385px")
+  .attr("fill", "white")
+  .attr("opacity", 0.3)
+  .attr("height", "74px")
+  .attr("x", 800)
+  .attr("y", 175)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/march2020-2.png")
+  .attr("height", "274px")
+  .attr("x", 803)
+  .attr("y", 135)
+
+  timeline.append("rect")
+  .attr("width", "280px")
+  .attr("fill", "#fca314")
+  .attr("opacity", 0.3)
+  .attr("height", "110px")
+  .attr("x", 640)
+  .attr("y", 25)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/march2020-1.png")
+  .attr("height", "274px")
+  .attr("x", 643)
+  .attr("y", -15)
+
   timeline.append("text")
   .attr("font-size", "20px")
   .text("February 2020")
   .attr("font-family", "Inter")
   .attr("fill", "white")
   .attr("x", 400)
+
+  timeline.append("rect")
+  .attr("width", "345px")
+  .attr("fill", "white")
+  .attr("opacity", 0.3)
+  .attr("height", "90px")
+  .attr("x", 280)
+  .attr("y", 185)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/feb2020.png")
+  .attr("height", "274px")
+  .attr("x", 283)
+  .attr("y", 140)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/kiplin.jpeg")
+  .attr("height", "134px")
+  .attr("x", 213)
+  .attr("y", 25)
+
+
+  // timeline.append("rect")
+  // .attr("width", "345px")
+  // .attr("fill", "#323232")
+  // .attr("opacity", 0.3)
+  // .attr("height", "20px")
+  // .attr("x", 20)
+  // .attr("y", 85)
+
+  // timeline.append("svg:image")
+  // .attr("xlink:href", "images/jan2020.png")
+  // .attr("height", "274px")
+  // .attr("x", 23)
+  // .attr("y", 20)
 
 
   timeline.append("text")
@@ -432,7 +552,7 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("x", 0)
 
   timeline.append("rect")
-  .attr("width", "5330px")
+  .attr("width", "5750px")
   .attr("stroke", "white")
   .attr("fill", "white")
   .attr("height", "3px")
@@ -447,6 +567,15 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("fill", "white")
   .attr("height", "30px")
   .attr("x", 60)
+  .attr("y", 285)
+
+
+  timeline.append("rect")
+  .attr("width", "3px")
+  .attr("stroke", "white")
+  .attr("fill", "white")
+  .attr("height", "30px")
+  .attr("x", 5810)
   .attr("y", 285)
 
 
@@ -558,10 +687,74 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
   .attr("x", 5390)
   .attr("y", 285)
 
-  // TIMELINE CONTENT
+  timeline.append("rect")
+  .attr("width", "390px")
+  .attr("fill", "#323232")
+  .attr("opacity", 0.3)
+  .attr("height", "110px")
+  .attr("x", 1860)
+  .attr("y", 20)
 
-  // FEBRUARY 2021
-  
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/june2020.png")
+  .attr("height", "274px")
+  .attr("x", 1866)
+  .attr("y", -20)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/jun2020_img.jpeg")
+  .attr("height", "120px")
+  .attr("x", 2136)
+  .attr("y", 143)
+
+
+  // May 2020
+
+
+  // timeline.append("rect")
+  // .attr("width", "390px")
+  // .attr("fill", "#323232")
+  // .attr("opacity", 0.3)
+  // .attr("height", "110px")
+  // .attr("x", 1660)
+  // .attr("y", 20)
+
+  // timeline.append("svg:image")
+  // .attr("xlink:href", "images/may2020.png")
+  // .attr("height", "274px")
+  // .attr("x", 1666)
+  // .attr("y", -20)
+
+  // April 2020
+
+
+  timeline.append("rect")
+  .attr("width", "270px")
+  .attr("fill", "rgb(252, 163, 20)")
+  .attr("opacity", 0.3)
+  .attr("height", "124px")
+  .attr("x", 1310)
+  .attr("y", 115)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/april2020-2.png")
+  .attr("height", "274px")
+  .attr("x", 1313)
+  .attr("y", 75)
+
+  timeline.append("rect")
+  .attr("width", "385px")
+  .attr("fill", "white")
+  .attr("opacity", 0.3)
+  .attr("height", "74px")
+  .attr("x", 1020)
+  .attr("y", 20)
+
+  timeline.append("svg:image")
+  .attr("xlink:href", "images/april2020-1.png")
+  .attr("height", "274px")
+  .attr("x", 1023)
+  .attr("y", -20)
 
 
 
@@ -576,7 +769,7 @@ const timeline = trisvg2.append("g").attr("id", "timeline")
     let yPos = flowScale(d["total"]) + 32;
     valuemark.attr("cx", xPos).attr("cy", yPos);
     select_rect.attr('x', x + 10).attr("y", 30);
-    timeline.attr("transform", "translate(" + (4.4*-1.05*x-.4*-x) + "," + (tlmargin.top) + ")")
+    timeline.attr("transform", "translate(" + (4.4*-1.05*x-.01*-x) + "," + (tlmargin.top) + ")")
     
     // WHEN THE MOUSE MOVES, INVERT AND MOVE THE SVG TIMELINE THE SAME WAY
 
