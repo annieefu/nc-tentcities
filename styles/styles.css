@@ -60,6 +60,11 @@ strong{
     margin-left: 29rem;
 }
 
+.date{
+    color: white;
+    font-size: 14px;
+}
+
 .timeline{
     overflow: auto;
     width:1200px;
